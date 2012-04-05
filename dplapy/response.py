@@ -18,3 +18,36 @@
 # response.py - API response class
 
 __version__ = '0.1'
+
+import simplejson
+
+class APIResponse(object):
+    """
+    Represents the API search results
+    """
+    def __init__(self, headers, content):
+        self.raw = simplejson.loads(content)
+        self.headers = headers
+
+    def status(self):
+        return self.headers['status']
+
+    def http_ok(self):
+        return self.headers['status'] == '200'
+
+    def is_error(self):
+        return len(self.raw['errors']) > 0
+
+    def count(self):
+        return self.raw['num_found']
+
+    def facets(self, fields=[]):
+        if type(self.raw['facets']) is not dict:
+            return {}
+        if len(fields):
+            return dict((k,v) for k,v in self.raw['facets'].items() if k in fields)
+        return self.raw['facets']
+
+    def results(self):
+        return self.raw['docs']
+            
