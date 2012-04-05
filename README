@@ -1,0 +1,31 @@
+DESCRIPTION
+-----------
+
+dplapy is a python module that provices a wrapper to the DPLA API
+
+INSTALLATION
+------------
+
+If you prefer, you can check out the latest version of the source using
+Git:
+
+    git clone https://github.com/lbjay/dplapy.git
+    
+To install:
+
+    python setup.py install
+
+TODO
+----
+
+- write the fucking thing
+
+LICENSE
+-------
+
+GPL/BSD (Dual Licensed), portions under the Apache License
+
+AUTHORS
+-------
+
+Jay Luker <lbjay@reallywow.com>
