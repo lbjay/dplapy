@@ -22,11 +22,17 @@ EXAMPLE USAGE
     api = dplapy.APIConnection('http://api.dp.la/dev/item/')
 
     resp = api.query('biography')
+    
 -or-
+
     resp = api.query('turtles', sort=('checkouts', dplapy.DESCENDING))
+    
 -or-
+
     resp = api.title_query('germany', facet=['creator','subject'])
+    
 -or-
+
     resp = api.subject_query('agriculture', limit=1, start=34356)
 
 TODO
