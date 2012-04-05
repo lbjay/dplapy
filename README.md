@@ -22,6 +22,8 @@ EXAMPLE USAGE
     api = dplapy.APIConnection('http://api.dp.la/dev/item/')
 
     resp = api.query('biography')
+    count = resp.count()
+    results = resp.results()
     
 -or-
 
