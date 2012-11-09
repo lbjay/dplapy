@@ -17,7 +17,7 @@ setup(
     version = '0.1',  # remember to update dplapy/__init__.py on release!
     url = 'http://github.com/anarchivist/dplapy',
     author = 'Jay Luker',
-    author_email = 'lbjay@reallywow.com'
+    author_email = 'lbjay@reallywow.com',
     license = 'GPL/BSD',
     packages = find_packages(),
     install_requires = install_requires,
